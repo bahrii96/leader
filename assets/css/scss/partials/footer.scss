@@ -1,0 +1,185 @@
+@import '../inc/vars';
+
+.footer {
+    position: relative;
+    background: rgba(19, 19, 19, 1);
+
+    margin-top: clamp(rem(48), vw(150), rem(150));
+    padding-top: clamp(rem(38), vw(64), rem(64));
+    &__top {
+        display: grid;
+        padding: rem(24) 0;
+        grid-template-columns: 0.8fr 1.5fr 0.7fr;
+        gap: 7%;
+        padding-bottom: clamp(rem(46), vw(80), rem(80));
+        @include tablet-md {
+            grid-template-columns: 1fr;
+            gap: rem(32);
+        }
+    }
+
+    &__first {
+        .logo {
+            display: block;
+            margin-bottom: clamp(rem(16), vw(32), rem(32));
+            @include tablet-sm {
+                text-align: center;
+            }
+            img {
+                max-width: rem(104);
+                width: 100%;
+                @include tablet-sm {
+                    margin: auto;
+                }
+            }
+        }
+
+        &-desc {
+            color: #b7b4b4;
+        }
+    }
+
+    &__menu-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6%;
+    }
+
+    &__menu-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: clamp(rem(12), vw(14), rem(14));
+        color: rgba(255, 178, 0, 1);
+        margin-bottom: clamp(rem(16), vw(32), rem(32));
+    }
+
+    &__menu-item {
+        margin-bottom: clamp(rem(12), vw(16), rem(16));
+        a {
+            color: #b7b4b4;
+            font-size: clamp(rem(14), vw(16), rem(16));
+            font-weight: 400;
+            transition: all 0.3s ease 0s;
+            &:hover {
+                color: rgba(255, 178, 0, 1);
+            }
+        }
+    }
+
+    &__menu-item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__socials {
+        display: flex;
+        gap: rem(15);
+        margin-top: clamp(rem(24), vw(32), rem(32));
+        margin-bottom: clamp(rem(32), vw(62), rem(62));
+
+        &-item {
+            transition: all 0.3s ease 0s;
+            display: block;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    &__markets {
+        display: flex;
+        gap: rem(8);
+        &-item {
+            transition: all 0.3s ease 0s;
+            display: block;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__bottom {
+        padding: clamp(rem(32), vw(48), rem(48)) 0;
+        border-top: 1px solid #b7b4b4;
+        display: flex;
+        justify-content: space-between;
+        gap: rem(32);
+        @include tablet-smm {
+            flex-direction: column;
+        }
+
+        &-menu {
+            display: flex;
+            gap: rem(24);
+            @include tablet-smm {
+                flex-direction: column;
+                align-items: center;
+                gap: rem(12);
+            }
+            a {
+                color: #b7b4b4;
+                font-size: clamp(rem(14), vw(16), rem(16));
+                font-weight: 400;
+                transition: all 0.3s ease 0s;
+                &:hover {
+                    color: rgba(255, 178, 0, 1);
+                }
+            }
+        }
+
+        &-caption {
+            color: #b7b4b4;
+            @include tablet-smm {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.subscribe-block {
+    padding-top: clamp(rem(50), vw(140), rem(140));
+
+    &__box {
+        border-radius: rem(16);
+        background: #131313;
+        border: 1px solid #ffffff33;
+        padding: clamp(rem(26), vw(47), rem(47)) clamp(rem(20), vw(64), rem(64));
+        .title {
+            font-size: clamp(rem(20), vw(24), rem(24));
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: rem(16);
+    }
+
+    &__form {
+        max-width: rem(430);
+        @include tablet-sm {
+            width: 100%;
+        }
+        form > p {
+            display: flex;
+            gap: rem(12);
+            @include tablet-sm {
+                flex-direction: column;
+                width: 100%;
+                gap: rem(0);
+            }
+        }
+        .btn {
+            padding: rem(4) rem(24);
+            @include tablet-sm {
+                height: rem(50);
+                width: 100%;
+            }
+        }
+        input[type='email'] {
+            margin-bottom: 0 !important;
+            height: rem(67);
+            @include tablet-sm {
+                height: rem(50);
+            }
+        }
+    }
+}
+

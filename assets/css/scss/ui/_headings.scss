@@ -1,0 +1,25 @@
+h1 {
+    font-size: clamp(rem(32), vw(56), rem(56));
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: clamp(rem(24), vw(40), rem(40));
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: clamp(rem(16), vw(30), rem(30));
+}
+h3 {
+    font-size: clamp(rem(20), vw(30), rem(30));
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.desc {
+    font-size: clamp(rem(14), vw(16), rem(16));
+    font-weight: 400;
+    color: #ffffffb2;
+letter-spacing: -0.02em;
+}
+

@@ -1,0 +1,42 @@
+input[type="radio"] ~ label::before {
+	input[type="checkbox"] {
+		opacity: 0;
+	}
+}
+
+input[type="radio"] ~ label::before {
+	content: "";
+	text-align: center;
+	color: #019bc1;
+	line-height: 1em;
+	width: rem(14);
+	height: rem(14);
+	border: 2px inset #019bc1;
+	border-radius: 0.25em;
+	display: inline-block;
+	margin-right: rem(5);
+	border-radius: 50%;
+}
+input[type="radio"]:checked ~ label::before {
+	content: "";
+	color: #019bc1;
+	border: 2px inset #019bc1;
+	border-radius: 50%;
+}
+
+input[type="radio"]:checked ~ label {
+	position: relative;
+}
+
+input[type="radio"]:checked ~ label::after {
+	content: "";
+	position: absolute;
+	left: rem(7);
+	top: rem(7);
+	background-color: #019bc1;
+	width: rem(10);
+	height: rem(10);
+	left: rem(4);
+	top: rem(4);
+	border-radius: 50%;
+}

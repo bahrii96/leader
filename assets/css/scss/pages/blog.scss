@@ -1,0 +1,14 @@
+@import '../inc/vars';
+
+.single-page-post {
+    position: relative;
+    padding: clamp(rem(24), vw(80), rem(80)) 0;
+		   h1 {
+        margin-bottom: clamp(rem(24), vw(32), rem(32));
+      font-size: clamp(rem(24), vw(46), rem(46));
+    }
+
+		&__featured{
+			        margin-bottom: clamp(rem(16), vw(40), rem(40));
+		}
+}

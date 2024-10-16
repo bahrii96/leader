@@ -1,0 +1,100 @@
+@import '../inc/vars';
+
+.contact-block {
+    padding-top: clamp(rem(120), vw(226), rem(226));
+    @include tablet-sm {
+        text-align: center;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: rem(120);
+        @include tablet-smm {
+            gap: rem(32);
+        }
+        @include tablet-sm {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        img {
+            @include tablet-sm {
+                width: 100%;
+                max-width: rem(400);
+                margin: auto;
+            }
+        }
+    }
+    h1 {
+        margin-bottom: clamp(rem(24), vw(32), rem(32));
+    }
+    &__desc {
+        margin-bottom: clamp(rem(32), vw(60), rem(60));
+    }
+    &__right {
+        padding: rem(64);
+        background: #131313;
+        border: 1px solid #ffffff33;
+        border-radius: rem(16);
+        @include tablet-smm {
+            padding: rem(32) rem(20);
+        }
+
+        &-title {
+            margin-bottom: rem(24);
+            font-weight: 600;
+            font-size: clamp(rem(32), vw(40), rem(40));
+            @include tablet-sm {
+                text-align: center;
+            }
+        }
+        .box {
+            p {
+                display: flex;
+                gap: rem(12);
+                margin-bottom: 0;
+                @include tablet-sm {
+                    flex-direction: column;
+                    gap: 0;
+                }
+            }
+            br {
+                display: none;
+            }
+        }
+        span.wpcf7-list-item.first.last {
+            margin: 0 0 25px;
+            label {
+                display: flex;
+                align-items: center;
+                gap: rem(8);
+                color: #ffffffb2;
+                font-weight: 400;
+                text-align: start;
+            }
+        }
+
+        input[type='checkbox'] {
+            appearance: none;
+            width: rem(16);
+            height: rem(16);
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            border-radius: rem(6);
+            cursor: pointer;
+            display: inline-block;
+            flex: 0 0 auto;
+            padding: rem(2);
+        }
+
+        input[type='checkbox']:checked {
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 8" fill="none"><path d="M1 4L4 7L10 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+

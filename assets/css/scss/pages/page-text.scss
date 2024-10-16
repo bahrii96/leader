@@ -1,0 +1,90 @@
+@import '../inc/vars';
+.text-page {
+    background-image: url('./../../images/bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hero-block {
+    position: relative;
+    overflow: hidden;
+    padding-top: clamp(rem(120), vw(300), rem(300));
+    padding-bottom: clamp(rem(60), vw(100), rem(100));
+
+    h1 {
+        max-width: rem(478);
+    }
+}
+.content {
+    line-height: 1.3;
+    position: relative;
+    z-index: 2;
+    letter-spacing: -0.02em;
+	
+    &__box {
+        background: #131313;
+        border-radius: rem(24);
+        border: 1px solid #ffffff33;
+        padding: clamp(rem(32), vw(80), rem(80)) clamp(rem(20), vw(72), rem(72));
+    }
+    h2 {
+        font-weight: 600;
+        font-size: rem(20);
+        margin-top: clamp(rem(24), vw(48), rem(48));
+        margin-bottom: clamp(rem(16), vw(24), rem(24));
+        color: #fff;
+        line-height: 1.3;
+    }
+    ol,
+    ul {
+        margin-left: rem(24);
+    }
+    li {
+        margin-bottom: rem(16);
+    }
+    ul {
+        ul {
+            margin-top: rem(16);
+            margin-left: rem(8);
+            list-style: none;
+
+            li {
+                display: flex;
+                align-items: start;
+                gap: rem(10);
+                &::before {
+                    content: '*';
+                }
+            }
+        }
+    }
+	strong{
+					color: #fff;
+					font-weight: 600;
+				}
+    .done {
+        list-style: none;
+        margin-left: rem(0);
+			
+        li {
+            display: flex;
+            align-items: start;
+            gap: rem(10);
+            &::before {
+                content: '';
+                height: 16px;
+                width: 16px;
+                background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.9987 15.1666C4.04536 15.1666 0.832031 11.9533 0.832031 7.99998C0.832031 4.04665 4.04536 0.833313 7.9987 0.833313C11.952 0.833313 15.1654 4.04665 15.1654 7.99998C15.1654 11.9533 11.952 15.1666 7.9987 15.1666ZM7.9987 1.83331C4.5987 1.83331 1.83203 4.59998 1.83203 7.99998C1.83203 11.4 4.5987 14.1666 7.9987 14.1666C11.3987 14.1666 14.1654 11.4 14.1654 7.99998C14.1654 4.59998 11.3987 1.83331 7.9987 1.83331Z" fill="white"/><path d="M7.05297 10.3867C6.91964 10.3867 6.79297 10.3333 6.69964 10.24L4.81297 8.35334C4.61964 8.16 4.61964 7.84 4.81297 7.64667C5.0063 7.45334 5.3263 7.45334 5.51964 7.64667L7.05297 9.18L10.4796 5.75334C10.673 5.56 10.993 5.56 11.1863 5.75334C11.3796 5.94667 11.3796 6.26667 11.1863 6.46L7.4063 10.24C7.31297 10.3333 7.1863 10.3867 7.05297 10.3867Z" fill="white"/></svg>');
+            }
+        }
+    }
+		table{
+			margin: rem(24) 0;
+		}
+			&.default{
+			.content__box{
+				padding:  clamp(rem(15), vw(45), rem(45));
+			}
+		}
+}
+

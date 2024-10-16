@@ -1,0 +1,35 @@
+@import '../inc/vars';
+
+
+.single-block{
+padding: clamp(rem(100), vw(170), rem(170));
+	  .ld-course-lessons-count {
+        display: block;
+        padding: rem(12) rem(16);
+
+        border: 1px solid #ffffff1a;
+
+        font-size: rem(12);
+        text-transform: uppercase;
+        border-radius: rem(6);
+
+        color: #ffb200;
+        background: #ffb20026;
+        margin-bottom: 0;
+        width: fit-content;
+        margin: clamp(rem(12), vw(24), rem(24)) 0 clamp(rem(24), vw(48), rem(48));
+    }
+.learndash-wrapper .ld-course-status.ld-course-status-enrolled{
+	  color: #ffb200;
+        background: #ffb20026;
+}
+iframe{
+width: 100%;
+min-height: rem(580);
+border-radius:rem(24);
+@include tablet-sm {
+	min-height: rem(260);
+}
+}
+}
+
